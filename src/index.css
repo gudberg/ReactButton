@@ -14,27 +14,36 @@
     text-align: 'center';
     position: 'relative';
     border: 'none';
-    background-color: blue;
-    
+    background-color: #3369ff;
+    outline:none;
+    border: none;
 }
 
-.small {
+.button:hover {
+    cursor: pointer
+}
+
+.button:active {
+    transform: translateY(4px);
+}
+
+.sm {
     width: 120px;
 }
 
-.medium {
+.md {
     width: 180px;
 }
 
-.large {
+.lg {
     width: 220px;
 }
 
 .primary {
-    background-color: blue;
+    background-color: #3369ff;
 }
-.warning {
-    background-color: grey;
+.info {
+    background-color: #FFFFFF;
 }
 .danger {
     background-color: red;
@@ -45,4 +54,8 @@
 
 .disabled {
     background: grey;
+}
+
+.fontColor {
+    color: grey;
 }

@@ -1,28 +1,25 @@
 import React, {Component} from 'react'
 import {render} from 'react-dom'
 import Button from '../../src'
+import './demo.css'
 
 class Demo extends Component {
+  
   render() {
-    return (
-     
+    return (  
      <div>
         <h1>react-button Demo</h1>
         <Button
-        text={'Submit'} 
-        type={'success'}
-        tag={'a'}
-        href={'http://www.bbc.com/'}
-        onClick={() => {}}
-        disabled={true}
-      />
+          text={'Submit'} 
+          onClick={() => {}}
+        />
 
       <Button
-        size={'medium'}
         text={'Cancel'}
-        type={'ded'}
-        tag={'button'}
-    />
+        color={'info'}
+        href={'http://www.bbc.com/'}
+        onClick={() => {}}
+      />
     </div>
   )
   }
