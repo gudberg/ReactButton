@@ -1,0 +1,48 @@
+.button {
+    color: white;
+    padding: 1.2em 2.9em;
+    width: 180px;
+    font-size: 14px;
+    margin: 0 0.5em 1.3em;
+    border-radius: 0.4em;
+    box-sizing: border-box;
+    text-decoration: none;
+    font-family: Roboto sans-serif;
+    font-weight: 400px;
+    color: '#FFFFFF';
+    background-color:'blue';
+    text-align: 'center';
+    position: 'relative';
+    border: 'none';
+    background-color: blue;
+    
+}
+
+.small {
+    width: 120px;
+}
+
+.medium {
+    width: 180px;
+}
+
+.large {
+    width: 220px;
+}
+
+.primary {
+    background-color: blue;
+}
+.warning {
+    background-color: grey;
+}
+.danger {
+    background-color: red;
+}
+.success {
+    background-color: green;
+}
+
+.disabled {
+    background: grey;
+}
