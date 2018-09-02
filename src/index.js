@@ -6,8 +6,8 @@ import _ from 'lodash'
 
 const propTypes = {
   size: PropTypes.string,
-  type: PropTypes.string,
-  tag: PropTypes.string,
+  color: PropTypes.string,
+  element: PropTypes.string,
   text: PropTypes.string,  
   disabled: PropTypes.bool,
   onClick: PropTypes.func,
@@ -16,8 +16,8 @@ const propTypes = {
 const defaultProps = {
   text: 'default text',
   size: 'md',
-  type: 'success',
-  tag: 'button',
+  color: 'success',
+  element: 'button',
   disabled: false,
   onClick: () => {}
 };
@@ -30,14 +30,12 @@ class Button extends Component {
   }
 
   onClick(e) {
-
     if (this.props.disabled) {
       e.preventDefault();
       return;
     }
 
     if (this.props.onClick) {
-      console.log(e)
       this.props.onClick(e);
     }
   }
@@ -48,13 +46,13 @@ class Button extends Component {
       size,
       text, 
       disabled,
-      tag: Tag,
+      element: Element,
       ...rest
     } = this.props
 
     // Turns into button if the prop has a link and is marked as button
-    if (rest.href && Tag === 'button') {
-      Tag = 'a';
+    if (rest.href && Element === 'button') {
+      Element = 'a';
     }
 
     // Changes the fontcolor if it is info
@@ -63,14 +61,14 @@ class Button extends Component {
     }
 
     return(
-      <Tag
-        type={(Tag === 'button' && rest.onClick) ? 'button' : undefined}
+      <Element
+        type={(Element === 'button' && rest.onClick) ? 'button' : undefined}
         {...rest}
         className={`${color} ${fontColor} ${disabled ? 'disabled': null} ${size} button`}
         onClick={this.onClick}
       >
         {text}
-      </Tag>
+      </Element>
     )
   } 
 }

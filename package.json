@@ -1,5 +1,5 @@
 {
-  "name": "react-button",
+  "name": "neat-react-button",
   "version": "1.0.0",
   "description": "react-button React component",
   "main": "lib/index.js",
@@ -30,11 +30,21 @@
     "react": "^16.4.2",
     "react-dom": "^16.4.2"
   },
-  "author": "",
-  "homepage": "",
+  "author": "beggi8",
+  "homepage": "https://github.com/gudberg/ReactButton#readme",
   "license": "MIT",
-  "repository": "",
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/gudberg/ReactButton.git"
+  },
   "keywords": [
     "react-component"
-  ]
+  ],
+  "directories": {
+    "lib": "lib",
+    "test": "tests"
+  },
+  "bugs": {
+    "url": "https://github.com/gudberg/ReactButton/issues"
+  }
 }
