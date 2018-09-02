@@ -1,5 +1,5 @@
-# react-button
-React-button is a button component that makes button creation a breeze
+# neat-react-button
+neat-react-button is a button component that makes button creation a breeze
 
 ## Installation
 ``yarn add neat-react-button``
