@@ -11,17 +11,15 @@ class Demo extends Component {
         <h1>react-button Demo</h1>
         <Button
           text={'Submit'} 
-          color={'success'}
           onClick={() => {}}
-          element={'button'}
+          color={"primary"}
         />
 
       <Button
-        text={'Sigurbjörg'}
+        text={'Anchor Tag'}
         color={'info'}
         href={'http://www.bbc.com/'}
         onClick={() => {}}
-        disabled={false}
       />
     </div>
   )

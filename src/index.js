@@ -1,7 +1,8 @@
 import React, {Component} from 'react'
 import PropTypes from 'prop-types';
-import styles from './index.css'
 import _ from 'lodash'
+import {injectStyle} from './utils'
+import buttonStyles from './buttonStyles'
 
 
 const propTypes = {
@@ -27,6 +28,8 @@ class Button extends Component {
   constructor(props) {
     super(props)
     this.onClick = this.onClick.bind(this);
+
+    injectStyle(buttonStyles, 'button-styles')
   }
 
   onClick(e) {
