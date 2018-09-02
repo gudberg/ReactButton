@@ -2,7 +2,7 @@
 
 neat-react-button is a button component that makes button creation a breeze
 
-![Showtime logo](demo/neat-react-buttonDemo.webm)
+![Showtime logo](demo/neat-react-buttonDemo.gif)
 
 ## Installation
 ``yarn add neat-react-button``
