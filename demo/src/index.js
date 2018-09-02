@@ -8,7 +8,7 @@ class Demo extends Component {
   render() {
     return (  
      <div>
-        <h1>react-button Demo</h1>
+        <h1>neat-react-button</h1>
         <Button
           text={'Submit'} 
           onClick={() => {}}
