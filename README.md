@@ -1,6 +1,8 @@
 # react-button
 React-button is a button component that makes button creation a breeze
 
+![Showtime logo](demo/neat-react-buttonDemo.webm)
+
 ## Installation
 ``yarn add neat-react-button``
 or
