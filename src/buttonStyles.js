@@ -11,13 +11,11 @@ const styles = `
       font-family: Roboto sans-serif;
       font-weight: 400px;
       color: #FFFFFF;
-      background-color: blue;
+      background: linear-gradient(to right, #3ea3f3 0%,#4389f7 100%);
       text-align: center;
       position: relative;
       border: none;
-      background-color: #3369ff;
-      outline:none;
-      border: none;
+      outline: none;
     }
 
     .button:hover {
@@ -41,23 +39,28 @@ const styles = `
     }
 
     .primary {
-      background-color: #3369ff;
+      background: linear-gradient(to right, #3ea3f3 0%,#4389f7 100%);
     }
 
     .info {
+      background: none;
       background-color: #FFFFFF;
     }
 
     .danger {
+      background: none;
       background-color: red;
     }
 
     .success {
-      background-color: green;
+      background: none;
+      background-color: #00cc00
     }
 
     .disabled {
-      background-color: #999999;
+      background:#cccccc;
+      color:#ffffff;
+      cursor: auto;
     }
 
     .fontColor {

@@ -9,17 +9,36 @@ class Demo extends Component {
     return (  
      <div>
         <h1>neat-react-button</h1>
+        
         <Button
-          text={'Submit'} 
+          text={'Small Submit'} 
           onClick={() => {}}
-          color={"primary"}
+          size={"sm"}
+          btntype={"reset"}
         />
-
+      
       <Button
         text={'Anchor Tag'}
         color={'info'}
         href={'http://www.bbc.com/'}
         onClick={() => {}}
+      />
+
+      <Button
+        text={'Success Button'}
+        color={'success'}
+      />
+
+      <Button
+        text={'Danger Button'}
+        color={'danger'}
+      />
+
+      <Button
+        text={'Disabled Tag'}
+        color={'info'}
+        href={'http://www.bbc.com/'}
+        disabled={true}
       />
     </div>
   )

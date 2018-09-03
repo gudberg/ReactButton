@@ -1,6 +1,6 @@
 import React, {Component} from 'react'
 import PropTypes from 'prop-types';
-import _ from 'lodash'
+import { debounce } from 'lodash';
 import {injectStyle} from './utils'
 import buttonStyles from './buttonStyles'
 
@@ -12,39 +12,53 @@ const propTypes = {
   text: PropTypes.string,  
   disabled: PropTypes.bool,
   onClick: PropTypes.func,
-};
+  debounce: PropTypes.number,
+  btntype: PropTypes.oneOf(['button', 'reset', 'submit', null]),
+}
 
 const defaultProps = {
+  btntype: 'button',
   text: 'default text',
   size: 'md',
-  color: 'success',
+  color: 'primary',
   element: 'button',
   disabled: false,
+  debounce: 0,
   onClick: () => {}
-};
+}
 
 class Button extends Component { 
   
   constructor(props) {
     super(props)
-    this.onClick = this.onClick.bind(this);
-
+    this.onClick = this.onClick.bind(this)
     injectStyle(buttonStyles, 'button-styles')
+  }
+
+  //Takes in onClick and returns debounced time(default 500ms)
+  debouncing(...args) {
+    this.debouncing = debounce(...args);
+    return e => {
+      e.persist();
+      return this.debouncing(e);
+    };
   }
 
   onClick(e) {
     if (this.props.disabled) {
-      e.preventDefault();
-      return;
+      e.preventDefault()
+      return
     }
 
     if (this.props.onClick) {
-      this.props.onClick(e);
+      console.log("click")
+      this.props.onClick(e)
     }
   }
-  
+
   render() {
     let {
+      btntype,
       color,
       size,
       text, 
@@ -54,7 +68,7 @@ class Button extends Component {
     } = this.props
 
     // Turns into button if the prop has a link and is marked as button
-    if (rest.href && Element === 'button') {
+    if (rest.href) {
       Element = 'a';
     }
 
@@ -63,19 +77,32 @@ class Button extends Component {
       var fontColor = 'fontColor'
     }
 
+    if(Element === 'a') {
+      return(
+        <Element
+          {...rest}
+          className={`${color} ${fontColor} ${disabled ? 'disabled': null} ${size} button`}
+          onClick={this.props.disabled ? (e)=>{e.preventDefault(); return} : this.debouncing(this.onClick, this.props.debounce)}
+        >
+          {text}
+        </Element>
+      )
+    }
+
     return(
       <Element
-        type={(Element === 'button' && rest.onClick) ? 'button' : undefined}
         {...rest}
+        btntype={this.props.btntype}
         className={`${color} ${fontColor} ${disabled ? 'disabled': null} ${size} button`}
-        onClick={this.onClick}
-      >
+        onClick={this.props.disabled ? (e)=>{e.preventDefault(); return} : this.debouncing(this.onClick, this.props.debounce)}
+        >
         {text}
       </Element>
     )
+   
   } 
 }
 
-Button.propTypes = propTypes;
-Button.defaultProps = defaultProps;
+Button.propTypes = propTypes
+Button.defaultProps = defaultProps
 export default Button
