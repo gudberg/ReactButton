@@ -43,7 +43,7 @@ The button becomes anchor if there is a link existing. Otherwise a button.
 |Element      |string       |button                    |Type of element                       |
 |text         |string       |default text              |The buttons's text                    |
 |disabled     |bool         |false                     |to disable button                     | 
-|debounce     |number       |0ms                       |Interrupts button click in ms         |
+|debounce     |number       |0                         |Interrupts button click in ms         |
 |onClick      |function     |()=>{}                    |fired after click                     |
 |btntype      |string array |button                    |button, submit, reset                 |
 
