@@ -6,11 +6,13 @@ neat-react-button is a button component that makes button creation a breeze
 
 
 ## Installation
+
 ``yarn add neat-react-button``
 or
 ``npm install neat-react-button``
 
 ## Work in Progress 
+
 Implemented as a handy tool and any pull requests welcomed!
 
 ## Usage
@@ -22,12 +24,15 @@ import Button from 'neat-react-button'
 ``` 
 
 ## Color Props
+
 there are currenctly four colors optional, primary(blue) the default one, success(green), info(white whith black font), and danger(red)
 
 ## Size Props
+
 There are currently three sizes optional, sm, md(default) and lg. 
 
 ## Element
+
 The button becomes anchor if there is a link existing. Otherwise a button.
 
 
@@ -37,10 +42,10 @@ The button becomes anchor if there is a link existing. Otherwise a button.
 |size         |string       |md                        |Button size                           |
 |color        |string       |primary                   |colors described by keywords          |
 |Element      |string       |button                    |Type of element                       |
-|disabled     |bool         |false                     |to disable button                     | 
-|onClick      |function     |()=>{}                    |fired after click                     |
 |text         |string       |default text              |The buttons's text                    |
+|disabled     |bool         |false                     |to disable button                     | 
 |debounce     |number       |0ms                       |Interrupts button click in ms         |
+|onClick      |function     |()=>{}                    |fired after click                     |
 |btntype      |string array |button                    |button, submit, reset                 |
 
 
