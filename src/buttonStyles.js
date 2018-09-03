@@ -1,11 +1,10 @@
 const styles = `
     .button {
       color: white;
-      padding: 1.2em 2.9em;
-      width: 180px;
+      padding: 1.0em 2.1em;
       font-size: 14px;
       margin: 0 0.5em 1.3em;
-      border-radius: 0.4em;
+      border-radius: 0.2em;
       box-sizing: border-box;
       text-decoration: none;
       font-family: Roboto sans-serif;
@@ -18,28 +17,24 @@ const styles = `
       outline: none;
     }
 
-    .button:hover {
-      curor: pointer;
-    }
-
-    .button:active {
-      transform: translateY(4px);
-    }
-
     .sm {
-      width: 120px;
-    }
-
-    .md {
-      width: 180px;
+      padding: 1.0em 0.6em;
     }
 
     .lg {
-      width: 220px;
+      padding: 1.2em 3.2em;
     }
 
     .primary {
       background: linear-gradient(to right, #3ea3f3 0%,#4389f7 100%);
+    }
+
+    .primary:hover {
+      background: #0d7dd7;
+    }
+
+    .primary:active {
+      background: #0c77cb;
     }
 
     .info {
@@ -47,14 +42,38 @@ const styles = `
       background-color: #FFFFFF;
     }
 
-    .danger {
-      background: none;
-      background-color: red;
+    .info:hover {
+      background: #bebebe;
     }
 
+    .info:active {
+      background: #b5b5b5;
+    }
+
+    .danger {
+      background: none;
+      background-color: #ff2a2a;
+    }
+
+    .danger:hover {
+      background: #de0000;
+    }
+
+    .danger:active {
+      background: #d20000;
+    }
+    
     .success {
       background: none;
-      background-color: #00cc00
+      background-color: #57E500
+    }
+
+    .success:hover {
+      background: #41ab00;
+    }
+
+    .success:active {
+      background: #3da200;
     }
 
     .disabled {

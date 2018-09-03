@@ -40,7 +40,7 @@ The button becomes anchor if there is a link existing. Otherwise a button.
 |-------------|-------------|--------------------------|--------------------------------------|
 |size         |string       |md                        |Button size                           |
 |color        |string       |primary                   |colors described by keywords          |
-|Element      |string       |button                    |Type of element                       |
+|element      |string       |button                    |Type of element                       |
 |text         |string       |default text              |The buttons's text                    |
 |disabled     |bool         |false                     |to disable button                     | 
 |debounce     |number       |0                         |Interrupts button click in ms         |

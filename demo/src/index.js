@@ -11,12 +11,17 @@ class Demo extends Component {
         <h1>neat-react-button</h1>
         
         <Button
-          text={'Small Submit'} 
+          text={'Small Button'} 
           onClick={() => {}}
           size={"sm"}
-          btntype={"reset"}
+          btntype={"submit"}
         />
-      
+
+        <Button
+        text={'large Button'}
+        size={"lg"}
+      />
+
       <Button
         text={'Anchor Tag'}
         color={'info'}

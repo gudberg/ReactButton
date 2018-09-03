@@ -51,7 +51,6 @@ class Button extends Component {
     }
 
     if (this.props.onClick) {
-      console.log("click")
       this.props.onClick(e)
     }
   }
